@@ -26,10 +26,20 @@ const events = {
             API.saveNewEntry(createNewEntry)
                 .then(() => {
                     API.getInterests()
-                    .then(renderInterests)
+                        .then(renderInterests)
                 })
         })
 
+    },
+    deleteEntry() {
+        interestsContainer.addEventListener("click", event => {
+            if (event.target.id.startsWith("deleteEntry--")) {
+                const entryToDelete = event.target.id.split("--")[1]
+                API.deleteEntry(entryToDelete)
+                    .then(API.getInterests)
+                    .then(renderInterests)
+            }
+        })
     }
 
 

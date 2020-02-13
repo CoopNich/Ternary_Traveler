@@ -7,6 +7,7 @@ const interestsHtmlFactory = (entries) => {
             <section>$${entries.cost}</section>
             <section>${entries.review}</section>
             <button id="editEntry--${entries.id}">Edit</button>
+            <button id="deleteEntry--${entries.id}">Delete</button>
         </div> `
 }
 
