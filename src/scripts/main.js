@@ -1,6 +1,6 @@
 import API from "./api.js"
 import renderInterests from "./render.js"
-
+import events from "./events.js"
 
 //  ! Set up interface in HTML with forms and labels
 //       Set up fetch call to retrieve data
@@ -17,3 +17,5 @@ API.getInterests()
 .then(parsedEntries => {
     renderInterests(parsedEntries)
  })
+
+ events.createEntry()
