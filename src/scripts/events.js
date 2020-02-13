@@ -1,5 +1,5 @@
-import API from "./api"
-import renderInterests from "./render"
+import API from "./api.js"
+import renderInterests from "./render.js"
 
 const entrySave = document.querySelector(".save_entry")
 const entryPlace = document.querySelector(".location_place")
@@ -11,10 +11,10 @@ const interestsContainer = document.querySelector(".poi_container")
 
 const createNewEntryFactory = (place, poi, description, cost, review) => {
     return {
-        "place": place,
+        "placeId": parseInt(place),
         "name": poi,
         "description": description,
-        "cost": cost,
+        "cost": parseInt(cost),
         "review": review
     }
 }
