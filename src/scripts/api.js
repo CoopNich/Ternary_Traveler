@@ -11,6 +11,12 @@ const API = {
       },
       body: JSON.stringify(entryObject)
    })
+    },
+    deleteEntry (id) {
+        return fetch(`http://localhost:8088/interests/${id}`, {
+            method: "DELETE"
+        })
+            .then(response => response.json())
     }
 
 }
